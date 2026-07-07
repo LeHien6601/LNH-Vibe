@@ -1,33 +1,27 @@
 # Handover
 
-## Purpose
-
-This file summarizes the current project state when switching between ChatGPT, Codex, and the human developer.
-
-It should be updated after every meaningful work session.
-
 ## Current State
 
-The Game Factory project is in the Factory Setup stage.
+Task 12: First Web Prototype Plan is complete as a Human + ChatGPT planning task.
 
-The repository documentation foundation, workflow state, skills, templates, and initial folder structure are now prepared.
+Bubble Tea Sort now has a prototype plan that defines the smallest playable web version and prepares the next Codex-owned implementation task.
 
-No game has been selected yet.
-No game code has been implemented yet.
-No reusable modules have been created yet.
+No gameplay code has been implemented yet.
+No Unity files have been created.
+No reusable modules have been created.
 
 ## Current Stage
 
 Stage:
 
 ```text
-Factory Setup
+Prototype Planning → Web Prototype
 ```
 
 Milestone:
 
 ```text
-Documentation Foundation
+First playable web prototype preparation
 ```
 
 Owner:
@@ -39,108 +33,58 @@ Human + ChatGPT
 Status:
 
 ```text
-Needs Review
+Needs Human Approval Before Codex Implementation
 ```
 
 ## Completed Work
 
-* Created Vision & North Star draft.
-* Created Production Pipeline draft.
-* Created Workflow Stages draft.
-* Created Game Specification Standard draft.
-* Created Game Spec Template draft.
-* Created Architecture draft.
-* Created Module Rules draft.
-* Created Module Index draft.
-* Created AI Workflow draft.
-* Created Codex Workflow draft.
-* Created Codex Task Template draft.
-* Created Handover Template draft.
-* Created Documentation Rules draft.
-* Created Decision Log draft.
-* Created Changelog draft.
-* Created Decision Record Template draft.
-* Created AGENTS.md draft.
-* Created initial Skill Library draft.
-* Created Workflow State Templates draft.
-* Created Repository Structure draft.
-* Prepared `workflow/current_task.md` for first game selection.
+* Created `docs/current_game/prototype_plan.md`.
+* Chose tap-to-select and tap-to-place as the first prototype control style.
+* Excluded drag-and-drop from the first prototype.
+* Set the first prototype level count to 5 hand-authored levels.
+* Defined included and excluded prototype scope.
+* Defined screen flow for main menu, gameplay, and win popup.
+* Defined exact core rules for Codex implementation.
+* Defined prototype file structure under `prototype_web/`.
+* Defined manual test checklist.
+* Prepared `workflow/current_task.md` for Task 13 as a Codex-owned implementation task.
 
 ## Files Changed
 
 ```text
-AGENTS.md
-docs/vision.md
-docs/north_star.md
-docs/pipeline.md
-docs/workflow_stages.md
-docs/game_spec_standard.md
-docs/architecture.md
-docs/module_rules.md
-docs/module_index.md
-docs/ai_workflow.md
-docs/codex_workflow.md
-docs/documentation_rules.md
-docs/decisions.md
-docs/changelog.md
-templates/game_spec_template.md
-templates/codex_task_template.md
-templates/handover_template.md
-templates/decision_record_template.md
-skills/game-design-review/SKILL.md
-skills/web-prototype-builder/SKILL.md
-skills/unity-porting/SKILL.md
-skills/release-quality-check/SKILL.md
-workflow/current_stage.md
+docs/current_game/prototype_plan.md
 workflow/current_task.md
-workflow/next_actions.md
-workflow/blockers.md
-workflow/review_requests.md
 workflow/handover.md
-workflow/done.md
-workflow/current_stage.md
-README.md
-docs/README.md
-workflow/README.md
-templates/README.md
-skills/README.md
-modules/README.md
-examples/README.md
-tools/README.md
-prototype_web/README.md
-unity_project/README.md
-assets/README.md
-release/README.md
+workflow/review_requests.md
+docs/changelog.md
 ```
 
 ## Tests Or Checks Performed
 
-No automated tests were available.
+No automated tests were available. Manual review is required.
 
-Manual review needed:
+Manual planning checks performed:
 
-* Check whether docs are too heavy for the first game.
-* Check whether Codex stop conditions are clear.
-* Check whether workflow files are enough for handoff.
-* Check whether the initial repository structure is sufficient.
-* Check whether `workflow/current_task.md` correctly pauses Codex until the first game is selected.
+* Prototype scope is limited to core gameplay.
+* Controls are explicitly defined.
+* Level count is explicitly defined.
+* Out-of-scope features are listed.
+* Codex ownership and next actor are explicit.
+* Codex stop conditions are explicit.
 
 ## Important Decisions
 
-Initial decisions drafted:
-
-* Use docs as the project source of truth.
-* Build one complete game before extracting stable modules.
-* Use web prototype first, then port to Unity for suitable casual games.
-* Codex must stop at blockers instead of guessing.
-* Human developer keeps final product, gameplay, art, and release approval.
+* First prototype will use tap-to-select and tap-to-place only.
+* Drag-and-drop is postponed until after gameplay review.
+* First prototype will include exactly 5 levels.
+* Save/load, audio, shop, monetization, boosters, and Unity files are excluded.
+* Task 13 is the first Codex implementation task, but only after human approval of the prototype plan.
 
 ## Known Issues
 
-* Dates are placeholders and should be replaced when files are committed.
-* First game has not been selected yet.
-* No actual implementation has started yet.
-* The documentation foundation may need simplification after first real use.
+* Human approval is still needed before Codex starts Task 13.
+* Level solvability should be checked during implementation.
+* Game spec approval remains tied to human acceptance of the Task 12 plan.
 
 ## Blockers
 
@@ -153,41 +97,59 @@ Review type:
 * [x] Human review
 * [x] ChatGPT review
 * [ ] Code review
-* [ ] Gameplay review
+* [x] Gameplay review after implementation
 * [ ] Asset review
 * [ ] Architecture review
 * [ ] Release review
 
 Review questions:
 
-* Is the foundation clear enough to start Codex implementation?
-* Are there too many docs for the first phase?
-* Which docs should be considered required versus optional?
-* Is the repository structure ready?
-* Which first game should prove the pipeline?
+* Is tap-only control enough for the first prototype?
+* Are 5 levels enough for first gameplay review?
+* Is the excluded scope strict enough?
+* Can Codex start Task 13 with this task definition?
 
 ## Next Recommended Task
 
-Task 10: First Game Selection
+Task 13: First Web Prototype Implementation
 
-Goal:
+Owner:
 
-Choose the first small casual game to prove the Game Factory pipeline.
+```text
+Codex
+```
+
+Execution Mode:
+
+```text
+Implementation Task
+```
+
+Next Actor:
+
+```text
+Codex, after Human approval
+```
 
 ## Notes For ChatGPT
 
-ChatGPT should continue by selecting or guiding selection of the first game.
+ChatGPT should help the human review the prototype plan and adjust scope if needed.
 
-Task 10 should include:
-
-* first game candidate name
-* reason for selection
-* intended player experience
-* rough scope boundaries
-* why the game is practical for web prototype and Unity porting
+If approved, ChatGPT can tell the human to give Codex the Task 13 `workflow/current_task.md`.
 
 ## Notes For Codex
 
-Codex should not implement gameplay yet.
+Codex should not start until the human approves `docs/current_game/prototype_plan.md`.
 
-Codex should wait for first game selection and an approved game specification task before creating prototype code.
+When approved, Codex should implement only Task 13 and should not add drag-and-drop, save/load, audio, Unity files, or reusable modules.
+
+## Suggested Workflow File Updates
+
+Already prepared:
+
+```text
+workflow/current_task.md
+workflow/handover.md
+workflow/review_requests.md
+docs/changelog.md
+```
