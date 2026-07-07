@@ -282,3 +282,84 @@ Manual checks:
 ### Follow-Up Needed
 
 Human + ChatGPT should choose the first game before Codex begins gameplay implementation.
+
+---
+
+## Task 13: First Web Prototype Implementation
+
+Date: 2026-07-07
+Owner: Codex
+Status: Complete
+
+### Summary
+
+Implemented the first playable local web prototype for Bubble Tea Sort under `prototype_web/`.
+
+The prototype includes main menu, gameplay, win popup, restart, next-level flow, 5 levels, tap-to-select controls, invalid feedback, match clearing, win detection, placeholder visuals, and local run instructions.
+
+### Files Changed
+
+```text
+prototype_web/README.md
+prototype_web/index.html
+prototype_web/package.json
+prototype_web/server.js
+prototype_web/src/main.js
+prototype_web/src/game/state.js
+prototype_web/src/game/rules.js
+prototype_web/src/game/level_loader.js
+prototype_web/src/game/validation.js
+prototype_web/src/data/levels.js
+prototype_web/src/data/pearls.js
+prototype_web/src/ui/screens.js
+prototype_web/src/ui/board_view.js
+prototype_web/src/ui/cup_view.js
+prototype_web/src/ui/popup.js
+prototype_web/src/styles/main.css
+workflow/current_stage.md
+workflow/current_task.md
+workflow/next_actions.md
+workflow/handover.md
+workflow/done.md
+workflow/review_requests.md
+docs/changelog.md
+```
+
+### Tests Or Checks
+
+Automated:
+
+```text
+npm run validate
+```
+
+Result:
+
+```text
+Validated 5 levels.
+```
+
+Manual/browser checks:
+
+* Main menu loads.
+* Play button starts Level 1.
+* Tapping an empty cup as source gives invalid feedback.
+* Tapping a non-empty cup selects its top pearl.
+* Tapping the selected source again cancels selection.
+* Moving to a non-full target succeeds.
+* Moving to a full target fails visibly.
+* Move counter increments only after valid moves.
+* A cup with 3 matching pearls clears.
+* A cup with mixed pearls does not clear.
+* Win popup appears when all cups are empty.
+* Restart restores the original level data.
+* Next Level loads the next level.
+* Levels 1 through 5 can be completed.
+* Level 5 completion shows final completion state.
+* Refreshing the page starts from the main menu and does not need to preserve progress.
+* Layout remains usable around mobile portrait width.
+* Browser console showed no errors or warnings during verification.
+
+### Follow-Up Needed
+
+Human + ChatGPT should play the prototype and complete Task 14: Prototype Review.

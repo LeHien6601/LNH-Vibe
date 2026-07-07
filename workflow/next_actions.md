@@ -10,46 +10,39 @@ Codex should not start a next action until it becomes the approved `workflow/cur
 
 ## Immediate Next Action
 
-## Task 10: First Game Selection
+## Task 14: Prototype Review
 
 Goal:
 
-Choose the first small casual game to prove the Game Factory pipeline.
+Human + ChatGPT should play and review the first Bubble Tea Sort web prototype.
 
 Expected output:
 
 ```text
-docs/current_game/idea.md
+docs/current_game/prototype_review.md
 workflow/current_task.md
+workflow/next_actions.md
 workflow/handover.md
 workflow/review_requests.md
 docs/changelog.md
 ```
 
-This is a Human + ChatGPT decision task. Codex should not choose the game independently.
+Review focus:
+
+* core loop clarity
+* tap-only control feel
+* clear feedback
+* level readability and difficulty
+* mobile portrait usability
+* whether to iterate, start art direction, or plan Unity porting
 
 ## Recommended Upcoming Tasks
 
-## Task 9: Repository Structure & Initial Codex Task
+## Task 14: Prototype Review
 
 Purpose:
 
-Prepare the repo so Codex can create files and maintain workflow state safely.
-
-Owner:
-
-Human + ChatGPT → define task
-Codex → implement structure
-
-Status:
-
-Done.
-
-## Task 10: First Game Selection
-
-Purpose:
-
-Choose the first small casual game to prove the Game Factory pipeline.
+Review gameplay feel, scope, UI clarity, and continuation decision.
 
 Owner:
 
@@ -59,94 +52,29 @@ Status:
 
 Ready.
 
-Suggested target:
-
-```text
-Small casual puzzle game
-```
-
-Selection criteria:
-
-* small scope
-* mobile-friendly
-* easy to prototype
-* easy to port to Unity
-* clear core loop
-* good for testing reusable level/UI/save workflow
-
-## Task 11: First Game Specification
+## Task 15: Prototype Follow-Up Plan
 
 Purpose:
 
-Create the first game spec using:
+Define the next scoped Codex task after prototype review.
 
-```text
-templates/game_spec_template.md
-```
+Possible outcomes:
 
-Output:
+* small prototype fixes
+* add drag-and-drop
+* improve clear feedback
+* revise level data
+* start art direction
+* start Unity port planning
+* stop or pivot if the core loop is not promising
 
-```text
-docs/current_game/idea.md
-docs/current_game/game_spec.md
-```
+Owner:
 
-Status:
-
-Blocked until Task 10 chooses the first game.
-
-## Task 12: First Web Prototype Plan
-
-Purpose:
-
-Define the minimum playable prototype for the first game.
-
-Output:
-
-```text
-docs/current_game/prototype_plan.md
-workflow/current_task.md
-```
+Human + ChatGPT
 
 Status:
 
-Blocked until Task 11 is approved.
-
-## Task 13: First Web Prototype Implementation
-
-Purpose:
-
-Codex implements the first playable web prototype.
-
-Output:
-
-```text
-prototype_web/
-prototype_web/README.md
-workflow/handover.md
-workflow/review_requests.md
-```
-
-Status:
-
-Blocked until Task 12 is approved.
-
-## Task 14: Prototype Review
-
-Purpose:
-
-Human + ChatGPT review gameplay feel, scope, UI clarity, and continuation decision.
-
-Output:
-
-```text
-docs/current_game/prototype_review.md
-workflow/next_actions.md
-```
-
-Status:
-
-Blocked until Task 13 is complete.
+Blocked until Task 14 review is complete.
 
 ## Optional Future Actions
 
@@ -162,8 +90,6 @@ These should not be started yet:
 
 ## Current Recommendation
 
-Finish the factory setup first.
+Play the prototype before adding features.
 
-Then choose the first game.
-
-Do not begin implementation before the first game specification and prototype plan are approved.
+Do not begin Unity work, art production, monetization, or reusable module extraction until the prototype review decides the next direction.

@@ -8,13 +8,13 @@ Codex and ChatGPT should read this file to understand where the project currentl
 
 ## Current Project
 
-Project Name: Game Factory
-Current Game: None yet
-Current Stage: Factory Setup
-Current Milestone: Documentation Foundation
-Owner: Human + ChatGPT
-Status: Needs Review
-Last Updated: 2026-07-06
+Project Name: Game Factory  
+Current Game: Bubble Tea Sort  
+Current Stage: Prototype Review  
+Current Milestone: First playable web prototype  
+Owner: Human + ChatGPT  
+Status: Needs Review  
+Last Updated: 2026-07-07
 
 ## Stage Status
 
@@ -40,7 +40,7 @@ Needs Review
 
 ## Current Focus
 
-The current focus is to create the documentation, workflow rules, Codex rules, and initial repository structure required before implementation begins.
+The current focus is Human + ChatGPT review of the first playable Bubble Tea Sort web prototype.
 
 ## Completed Foundation Tasks
 
@@ -53,27 +53,31 @@ The current focus is to create the documentation, workflow rules, Codex rules, a
 * [x] Task 7: Skill Library & AGENTS.md
 * [x] Task 8: Workflow State Templates
 * [x] Task 9: Repository Structure & Initial Codex Task
+* [x] Task 10: First Game Selection
+* [x] Task 11: First Game Specification
+* [x] Task 12: First Web Prototype Plan
+* [x] Task 13: First Web Prototype Implementation
 
-## Next Foundation Tasks
+## Next Tasks
 
-* [ ] Task 10: First Game Selection
-* [ ] Task 11: First Game Specification
-* [ ] Task 12: First Web Prototype Plan
+* [ ] Task 14: Prototype Review
+* [ ] Task 15: Prototype Follow-Up Plan
 
 ## Active Review Gate
 
 Review Gate:
 
 ```text
-Factory documentation foundation review
+Prototype gameplay review
 ```
 
 Review Needed:
 
-* [x] Human review
-* [x] ChatGPT review
-* [ ] Codex implementation readiness review
+* [x] Human gameplay review
+* [x] ChatGPT prototype review
+* [ ] Code review
+* [ ] Asset review
 
 ## Notes
 
-The project should not begin gameplay implementation until the first game is selected and the first game specification is approved.
+The prototype uses placeholder visuals only. Human + ChatGPT should review gameplay feel, tap-only controls, level readability, and whether the game should continue to iteration, art direction, or Unity port planning.

@@ -5,48 +5,59 @@
 Status:
 
 ```text
-Task 12 prototype plan needs Human approval before Codex implementation.
+Task 13 web prototype implementation needs Human + ChatGPT gameplay review.
 ```
 
 ## Active Review Requests
 
-## Review Request: Bubble Tea Sort Prototype Plan
+## Review Request: Bubble Tea Sort Web Prototype
 
 ## Review Type
 
-Human review + ChatGPT review
+Human gameplay review + ChatGPT prototype review
 
 ## What Changed
 
-Created the first web prototype plan for Bubble Tea Sort.
+Implemented the first playable local web prototype for Bubble Tea Sort.
 
-The plan defines:
+The prototype includes:
 
-* tap-only controls for the first prototype
+* main menu
+* gameplay screen
+* win popup
+* restart flow
+* next-level flow
 * 5 hand-authored levels
-* included mechanics
-* excluded features
-* screen flow
-* file structure
-* manual test checklist
-* Codex stop conditions
-* Task 13 Codex implementation scope
+* tap-to-select and tap-to-place interaction
+* invalid move feedback
+* match clearing for 3 identical pearls
+* win detection
+* placeholder cup and pearl visuals
+* local run instructions
+* level validation script
 
 ## Files Or Areas To Review
 
 ```text
-docs/current_game/prototype_plan.md
-workflow/current_task.md
+prototype_web/
+prototype_web/README.md
+prototype_web/src/data/levels.js
+prototype_web/src/game/rules.js
+prototype_web/src/ui/
+prototype_web/src/styles/main.css
 workflow/handover.md
+workflow/done.md
 ```
 
 ## Questions
 
-* Is tap-to-select / tap-to-place acceptable for the first prototype?
-* Should drag-and-drop remain postponed?
-* Are exactly 5 levels enough for the first Codex implementation?
-* Is the excluded scope strict enough?
-* Can Codex safely start Task 13 from the prepared `workflow/current_task.md`?
+* Is the core loop understandable?
+* Does tap-to-select / tap-to-place feel acceptable on mobile?
+* Are the clears satisfying enough for the next iteration?
+* Are the 5 levels readable and useful for first review?
+* Should drag-and-drop remain postponed or become the next task?
+* Should movement later require same-color target compatibility?
+* Should the project continue to art direction or Unity port planning?
 
 ## Risk Level
 
@@ -54,7 +65,7 @@ Medium
 
 ## Recommended Next Step
 
-Approve the prototype plan, then let Codex start Task 13: First Web Prototype Implementation.
+Play the local prototype, record prototype review notes, and prepare the next scoped task.
 
 ## Status
 
@@ -66,4 +77,4 @@ Open
 
 ## Resolution
 
-Leave empty until resolved.
+Leave empty until review is complete.

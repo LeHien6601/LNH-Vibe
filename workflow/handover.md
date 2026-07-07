@@ -2,89 +2,132 @@
 
 ## Current State
 
-Task 12: First Web Prototype Plan is complete as a Human + ChatGPT planning task.
+Task 13: First Web Prototype Implementation is complete.
 
-Bubble Tea Sort now has a prototype plan that defines the smallest playable web version and prepares the next Codex-owned implementation task.
+Bubble Tea Sort now has a playable local web prototype under `prototype_web/`.
 
-No gameplay code has been implemented yet.
-No Unity files have been created.
-No reusable modules have been created.
+No Unity files were created.
+No reusable modules were created.
+No final art assets were created.
 
 ## Current Stage
 
 Stage:
 
 ```text
-Prototype Planning → Web Prototype
+Web Prototype -> Prototype Review
 ```
 
 Milestone:
 
 ```text
-First playable web prototype preparation
+First playable Bubble Tea Sort web prototype
 ```
 
 Owner:
 
 ```text
-Human + ChatGPT
+Codex -> Human + ChatGPT
 ```
 
 Status:
 
 ```text
-Needs Human Approval Before Codex Implementation
+Needs Gameplay Review
 ```
 
 ## Completed Work
 
-* Created `docs/current_game/prototype_plan.md`.
-* Chose tap-to-select and tap-to-place as the first prototype control style.
-* Excluded drag-and-drop from the first prototype.
-* Set the first prototype level count to 5 hand-authored levels.
-* Defined included and excluded prototype scope.
-* Defined screen flow for main menu, gameplay, and win popup.
-* Defined exact core rules for Codex implementation.
-* Defined prototype file structure under `prototype_web/`.
-* Defined manual test checklist.
-* Prepared `workflow/current_task.md` for Task 13 as a Codex-owned implementation task.
+* Implemented a local plain HTML/CSS/JavaScript web prototype.
+* Added main menu, gameplay screen, and win popup.
+* Added restart and next-level flows.
+* Added 5 hand-authored levels from the prototype plan with no level-data corrections.
+* Added tap-to-select and tap-to-place cup interaction.
+* Added same-cup tap cancellation.
+* Added invalid feedback for empty source and full target.
+* Added move counter and level labels.
+* Added match clear when a cup contains 3 identical pearls.
+* Added win detection when all cups are empty.
+* Added placeholder cup and pearl visuals.
+* Added a dependency-free local Node static server.
+* Added level validation script.
 
 ## Files Changed
 
 ```text
-docs/current_game/prototype_plan.md
+prototype_web/README.md
+prototype_web/index.html
+prototype_web/package.json
+prototype_web/server.js
+prototype_web/src/main.js
+prototype_web/src/game/state.js
+prototype_web/src/game/rules.js
+prototype_web/src/game/level_loader.js
+prototype_web/src/game/validation.js
+prototype_web/src/data/levels.js
+prototype_web/src/data/pearls.js
+prototype_web/src/ui/screens.js
+prototype_web/src/ui/board_view.js
+prototype_web/src/ui/cup_view.js
+prototype_web/src/ui/popup.js
+prototype_web/src/styles/main.css
+workflow/current_stage.md
 workflow/current_task.md
+workflow/next_actions.md
 workflow/handover.md
+workflow/done.md
 workflow/review_requests.md
 docs/changelog.md
 ```
 
 ## Tests Or Checks Performed
 
-No automated tests were available. Manual review is required.
+Automated checks:
 
-Manual planning checks performed:
+```text
+npm run validate
+```
 
-* Prototype scope is limited to core gameplay.
-* Controls are explicitly defined.
-* Level count is explicitly defined.
-* Out-of-scope features are listed.
-* Codex ownership and next actor are explicit.
-* Codex stop conditions are explicit.
+Result:
+
+```text
+Validated 5 levels.
+```
+
+Browser checks:
+
+* Main menu loads.
+* Play button starts Level 1.
+* Empty source tap gives invalid feedback.
+* Non-empty source tap selects top pearl.
+* Same source tap cancels selection.
+* Valid move works.
+* Full target move fails visibly.
+* Move counter increments only after valid moves.
+* 3 matching pearls clear.
+* Mixed pearls do not clear.
+* Win popup appears when all cups are empty.
+* Restart restores the original level data.
+* Next Level loads the next level.
+* Levels 1 through 5 can be completed.
+* Level 5 completion shows final completion state.
+* Page refresh starts from the main menu and does not preserve progress.
+* Mobile portrait width around 390px has no horizontal overflow and cups fit onscreen.
+* Browser console had no errors or warnings during the checked run.
 
 ## Important Decisions
 
-* First prototype will use tap-to-select and tap-to-place only.
-* Drag-and-drop is postponed until after gameplay review.
-* First prototype will include exactly 5 levels.
-* Save/load, audio, shop, monetization, boosters, and Unity files are excluded.
-* Task 13 is the first Codex implementation task, but only after human approval of the prototype plan.
+* User instruction `next task` on 2026-07-07 was treated as approval to start Task 13.
+* The prototype stayed dependency-free and uses a small local Node server instead of `npx http-server`.
+* The exact 5 levels from `docs/current_game/prototype_plan.md` were used without correction.
+* Placeholder visuals remain prototype-only and are not final art.
 
 ## Known Issues
 
-* Human approval is still needed before Codex starts Task 13.
-* Level solvability should be checked during implementation.
-* Game spec approval remains tied to human acceptance of the Task 12 plan.
+* Gameplay feel needs Human + ChatGPT review.
+* Tap-only controls need review before deciding whether to add drag-and-drop.
+* Clear feedback is intentionally simple and may need polish after review.
+* Level difficulty and readability need review.
 
 ## Blockers
 
@@ -94,62 +137,57 @@ No active blockers.
 
 Review type:
 
-* [x] Human review
-* [x] ChatGPT review
+* [x] Human gameplay review
+* [x] ChatGPT prototype review
 * [ ] Code review
-* [x] Gameplay review after implementation
 * [ ] Asset review
 * [ ] Architecture review
 * [ ] Release review
 
 Review questions:
 
-* Is tap-only control enough for the first prototype?
-* Are 5 levels enough for first gameplay review?
-* Is the excluded scope strict enough?
-* Can Codex start Task 13 with this task definition?
+* Is the core loop understandable?
+* Does tap-to-select feel acceptable?
+* Are clears satisfying enough?
+* Are the 5 levels enough for first review?
+* Should drag-and-drop be added next?
+* Should movement restrictions be added next?
+* Should the project continue to art direction and Unity port planning?
 
 ## Next Recommended Task
 
-Task 13: First Web Prototype Implementation
+Task 14: Prototype Review
 
 Owner:
 
 ```text
-Codex
+Human + ChatGPT
 ```
 
 Execution Mode:
 
 ```text
-Implementation Task
+Review Task
 ```
 
 Next Actor:
 
 ```text
-Codex, after Human approval
+Human + ChatGPT
 ```
 
 ## Notes For ChatGPT
 
-ChatGPT should help the human review the prototype plan and adjust scope if needed.
+Review the prototype against `docs/current_game/prototype_plan.md` and `docs/current_game/game_spec.md`.
 
-If approved, ChatGPT can tell the human to give Codex the Task 13 `workflow/current_task.md`.
+Focus on gameplay clarity, tap control feel, level difficulty, and whether the next task should be prototype iteration, art direction, or Unity port planning.
 
 ## Notes For Codex
 
-Codex should not start until the human approves `docs/current_game/prototype_plan.md`.
+Do not continue implementation until Task 14 produces a new approved Codex task.
 
-When approved, Codex should implement only Task 13 and should not add drag-and-drop, save/load, audio, Unity files, or reusable modules.
-
-## Suggested Workflow File Updates
-
-Already prepared:
+If asked to commit this work, suggested commit message:
 
 ```text
-workflow/current_task.md
-workflow/handover.md
-workflow/review_requests.md
-docs/changelog.md
+feat(prototype): add bubble tea sort web prototype
 ```
